@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+/* TodoList 컨테이너 스타일 */
+div {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color:azure;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 입력 필드 스타일 */
+input[type="text"] {
+  width: calc(100% - 70px);
+  padding: 5px;
+  margin-bottom: 30px;  
+  border: 1px solid purple;
+  border-radius: 10px;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 버튼 공통 스타일 */
+button {
+  padding: 10px 15px;
+  margin-left: 5px;
+  border: 2px solid black;
+  border-radius: 3px;
+  cursor:grabbing;
+  transition: background-color 0.3s;
+  font-size:13px
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* 추가 버튼 스타일 */
+button:hover {
+  background-color: greenyellow;
 }
 
-.App-link {
-  color: #61dafb;
+delButton {
+  padding: 8px 15px 10px;
+  margin-left: 310px;
+  border: 2px solid black;
+  border-radius: 3px;
+  cursor:pointer;
+  transition: background-color 0.5s;
+  font-size:13px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+delButton:hover{
+  background-color :aqua
+}
+
+/* 삭제 버튼 스타일 */
+li button {
+  background-color: #ffdddd;
+  color:grey;
+}
+
+li button:hover {
+  background-color: #ffaaaa;
+}
+
+/* 할 일 리스트 스타일 */
+ul {
+  list-style-type:square;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  background-color: #fff;
+  border:3px solid skyblue;
+  border-bottom: none;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  list-style-type: decimal;
+  counter-increment: item 1;
+}
+
+li:last-child {
+  border-bottom:3px solid skyblue
+}
+
+li:before {
+  
 }
